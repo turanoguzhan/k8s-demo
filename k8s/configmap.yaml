@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-demo-cfg
+data:
+  # property-like keys; each key maps to a simple value
+  hello.greetings: "Merhaba"
+  hello.to: "Dostum"
+
+  # file-like keys
+  application.properties: |
+    hello.greetings= こんにちは、- Konnichiwa
+    hello.to= 友よ - Tomoyo
+    
+    application-dev.properties: |
+      hello.greetings= こんにちは、- Konnichiwa
+      hello.to= 友よ - Tomoyo
+    
+    application-prod.properties: |
+      hello.greetings= こんにちは、- Konnichiwa
+      hello.to= 友よ - Tomoyo
